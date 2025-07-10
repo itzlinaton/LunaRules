@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lunalite - Community Rules</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Rules" />
+    <meta property="og:description" content="A quality 1.21+ Free-for-All & Clans based Minecraft server featuring wonderful knockback, massive maps, and a competitive player base. Play now at lunalite.net!" />
+    <meta property="og:image" content="https://staff.lunalite.net/lunalitelogo.png" />
+    <meta content="#d90000" data-react-helmet="true" name="theme-color" />
+    <title>Rules</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            background: #0f172a;
+            font-family: "Poppins", sans-serif;
+            color: #e0e7ff;
+          }
+    
+          @keyframes hoverUpDown {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-15px);
+            }
+          }
+    
+          .hover-float {
+            animation: hoverUpDown 4s ease-in-out infinite;
+          }
+    
+          html {
+            scroll-behavior: smooth;
+          }
+    
+          blockquote {
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            color: #a5b4fc;
+            font-style: italic;
+            margin: 1rem 0;
+          }
+    
+          pre {
+            background: #1e293b;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: "Fira Code", monospace, monospace;
+            margin: 1rem 0;
+            color: #d1d5db;
+          }
+          ::-webkit-scrollbar {
+            width: 12px;
+            background: transparent;
+          }
+    
+          ::-webkit-scrollbar-track {
+            background: transparent;
+          }
+    
+          ::-webkit-scrollbar-thumb {
+            background-color: rgba(99, 102, 241, 0.5);
+            border-radius: 9999px;
+            border: 3px solid transparent;
+            background-clip: content-box;
+            transition: background-color 0.5s ease;
+          }
+    
+          ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(99, 102, 241, 0.8);
+          }
+    
+          * {
+            scrollbar-width: auto;
+            scrollbar-color: rgba(99, 102, 241, 0.5) transparent;
+          }
+          body.loading-active {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+          }
+          .hashtag {
+            color: #a78bfa;
+            font-weight: 800;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            user-select: none;
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .responsive-left-shift {
+            margin-left: 0;
+          }
+          @media (min-width: 1024px) {
+            .responsive-left-shift {
+              margin-left: -300px;
+            }
+          }
+          @media (min-width: 1280px) {
+            .responsive-left-shift {
+              margin-left: -500px;
+            }
+          }
+          @media (min-width: 1440px) {
+            .responsive-left-shift {
+              margin-left: -680px;
+            }
+          }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center px-4 py-12">
+  <button id="backToTopBtn" aria-label="Back to top" class="fixed bottom-8 right-8 p-3 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 opacity-0 pointer-events-none transition-opacity duration-300">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+    <div id="loadingScreen" class="fixed inset-0 bg-[#111827] flex items-center justify-center z-[99999]">
+        <img src="logo.png" alt="Loading" class="w-32 h-32 animate-spin" />
+    </div>
+    <nav id="navIcons" class="w-full max-w-3xl flex justify-center gap-8 mb-16" data-aos="fade-down" data-aos-duration="1000">
+        <a href="https://discord.lunalite.net" target="_blank" rel="noopener" aria-label="Discord Server" class="text-indigo-500 hover:text-indigo-700 transition text-2xl">
+            <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://store.lunalite.net" target="_blank" rel="noopener" aria-label="Store" class="text-indigo-500 hover:text-indigo-700 transition text-2xl">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    </nav>
+
+    <div class="fixed top-7 right-4 z-50 flex items-center space-x-2 sm:right-8">
+        <button id="toggleSearch" class="text-indigo-500 hover:text-indigo-700 transition text-2xl focus:outline-none flex items-center justify-center h-14" aria-label="Toggle Search">
+            <i class="fas fa-search"></i>
+        </button>
+
+        <div id="searchBox" class="h-10 w-0 opacity-0 pointer-events-none overflow-hidden transition-all duration-300 ease-in-out max-w-full sm:max-w-xs">
+            <input type="text" placeholder="Search..." class="h-10 w-full max-w-xs bg-slate-800 text-indigo-100 placeholder-indigo-400 border border-indigo-500 rounded-full px-4 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-sm shadow-md" />
+        </div>
+    </div>
+    <img src="logo.png" alt="Lunalite Logo" class="w-32 h-32 mb-6 hover-float" data-aos="fade-down" data-aos-duration="1500" />
+
+    <h1 class="text-4xl font-extrabold mb-2 text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+      Lunalite — Community Rules
+    </h1>
+
+    <p class="max-w-xl text-center text-indigo-200 mb-12" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+        As with any server, a fair and welcoming environment cannot exist without some rules in place. These following rules must be followed at all times. Failure to do so might lead to a mute or ban, depending on the situation.
+    </p>
+    <p class="text-center text-xs text-gray-500 mb-16" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+        Last updated: July 10, 2025
+    </p>
+    <div class="max-w-3xl w-full text-left mt-20 px-4 responsive-left-shift" data-aos="fade-left" data-aos-duration="1000">
+        <div id="rulesContainer" data-aos="fade-left" data-aos-duration="1000">
+            <h1 id="discord-rules" class="font-extrabold text-3xl mb-4 flex items-center">
+          <span class="hashtag">#</span> Discord Rules
+          <i class="fab fa-discord text-indigo-500 ml-3"></i>
+        </h1>
+            <p class="text-gray-300 text-base mb-10 leading-relaxed">
+                This section covers the rules specific to our Discord server. Below is a comprehensive list of prohibited actions. Failure to comply with these rules may result in disciplinary action.
+            </p>
+
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          1. Duplicate Messages
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+                Sending duplicate or spam messages over and over disrupts conversations and is not permitted. Violations may result in temporary or permanent restrictions.
+            </p>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          2. Extreme Toxicity
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+              Excessive toxicity towards other users ruins the experience for those affected, thus resulting in temporary or even permanent restrictions for offenders.
+              Reports for <strong>extreme toxicity</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.
+              <br><br>The following categories which fall under extreme toxicity are listed below.
+            </p>
+            <p class="text-lg font-semibold text-gray-300">Categories:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Harassment</li>
+                        <li>Racism</li>
+                        <li>Extreme Profanity</li>
+                        <li>Usage of Slurs</li>
+                        <li>Discriminatory behavior</li>
+                    </ul>
+                    <br>
+               <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>extreme toxicity</strong> is a <strong>7-day</strong> mute. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          3. Trolling
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+              Disruptive and annoying actions, such as spam-pinging staff and other users, opening tickets for no reason, and other things along those lines, waste our and other peoples time, and are thus not permitted. Offenses may result in temporary restrictions and bans from opening tickets.
+               Reports for <strong>trolling</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.<br>
+            </p>
+         <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+             <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>trolling</strong> is a <strong>7-day</strong> mute. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          4. Doxxing
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+             <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+              Sharing other users personal information without their consent of any kind, is strictly prohibited and will result in an immediate permanent ban from our network.<br><br>
+               Reports for <strong>doxxing</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.<br><br>
+                    Users caught violating this rule will be issued with a permanent non-appealable blacklist from the entire Network. Our systems will automatically notify a player if they are Blacklisted from the Network.<br><br>
+                    Behaviour which fall under doxxing can be found below this message.
+                  </p>
+                <p class="text-lg font-semibold text-gray-300 mb-2">Categories:</p>
+               <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>Revealing a Phone Number.</li>
+                <li>Revealing a Full Name.</li>
+                <li>Revealing an Adress.</li>
+                <li>Revealing an IP.</li>
+                <li>Revealing a Face.</li>
+                <li>Revealing a Family Relative's Name.</li>
+                <li>Revealing any private information about the player.</li>
+               </ul>
+                <br>
+                  <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>doxxing</strong> is a <strong>permanent</strong> blacklist, from the Network without appeal.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          5. Impersonation
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+            Users may not pretend to be others, and offenders of this rule will be asked to adapt their profile to comply with this rule. 
+            Ignoring those instructions may result in restrictions later down the line.<br><br>
+            Reports for <strong>Impersonation</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.
+            </p>
+                <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>impersonation</strong> is a <strong>1-week</strong> mute, if the player does not comply with given staff instructions to refrain from attempting to impersonate others. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          6. Advertising
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+                You may not promote any servers, competition to Lunalite or not, as well as any other unrelated content of any kind. Exceptions may only apply towards Media Influencers playing on the server during a livestream or Video otherwise you will recieve a Punishment.<br><br>
+                Reports for <strong>advertising</strong> may be issued in our
+                <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                    <span>Discord Server</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>.
+              </p>
+            <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>advertising</strong> is a <strong>7-day</strong> mute. The duration may vary depending on the severity of the exploit and will double with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in an increased ban duration.
+                </li>
+            </ul>
+            <br>
+         <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+              7. Inappropriate Content
+              <i class="fas fa-exclamation-circle ml-2"></i>
+            </h3>
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                Sharing any form of inappropriate content, whether its in text, images, GIFs, or videos, is strictly prohibited. Doing so may result in the deletion of the message and a punishment against the offender.
+            </p>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-2">
+                This includes but is not limited to:
+            </p>
+
+            <ul class="list-disc list-outside pl-5 text-sm text-gray-300 mb-6">
+                <li>Gore</li>
+                <li>Pornography</li>
+                <li>NSFW content</li>
+                <li>Hentai</li>
+            </ul>
+            </p>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+             It also includes any attempts at sexual harassment toward other players on the server.
+             <br><br>
+              Reports for <strong>inappropriate content</strong> may be issued in our
+                <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                    <span>Discord Server</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>.
+            </p>
+            <div class="mt-16">
+                <h1 id="server-rules" class="font-extrabold text-3xl mb-6 flex items-center">
+            <span class="hashtag">#</span> Server Rules
+            <i class="fas fa-server text-indigo-500 ml-3"></i>
+          </h1>
+                <p class="text-gray-300 text-base mb-10 leading-relaxed">
+                    This section outlines the rules specific to the Minecraft server. Below is a comprehensive list of prohibited actions. Violations may result in penalties.
+                </p>
+            </div>
+
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          1. Duplicate Messages
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+              Sending duplicate or spam messages over and over disrupts conversations and is not permitted.
+              Reports for <strong>duplicate messages</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.<br>
+              <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+             <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>duplicate messages</strong> is a <strong>1-hour</strong> mute. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+            </p>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          2. Trolling
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+              Disruptive and annoying actions, such as spam-pinging staff and other users, opening tickets for no reason, and other things along those lines, waste our and other peoples time, and are thus not permitted. Offenses may result in temporary restrictions and bans from opening tickets.
+               Reports for <strong>trolling</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.<br>
+            </p>
+         <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+             <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>trolling</strong> is a <strong>7-day</strong> mute. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          3. Doxxing
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+              Sharing other users personal information without their consent of any kind, is strictly prohibited and will result in an immediate permanent ban from our network.<br><br>
+               Reports for <strong>doxxing</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.<br><br>
+                    Users caught violating this rule will be issued with a permanent non-appealable blacklist from the entire Network. Our systems will automatically notify a player if they are Blacklisted from the Network.<br><br>
+                    Behaviour which fall under doxxing can be found below this message.
+                  </p>
+                <p class="text-lg font-semibold text-gray-300 mb-2">Categories:</p>
+               <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>Revealing a Phone Number.</li>
+                <li>Revealing a Full Name.</li>
+                <li>Revealing an Adress.</li>
+                <li>Revealing an IP.</li>
+                <li>Revealing a Face.</li>
+                <li>Revealing a Family Relative's Name.</li>
+                <li>Revealing any private information about the player.</li>
+               </ul>
+                <br>
+                  <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>doxxing</strong> is a <strong>permanent</strong> blacklist, from the Network without appeal.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          4. Impersonation
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+            Users may not pretend to be others, and offenders of this rule will be asked to adapt their profile to comply with this rule. 
+            Ignoring those instructions may result in restrictions later down the line.<br><br>
+            Reports for <strong>Impersonation</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.
+            </p>
+                <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>impersonation</strong> is a <strong>1-week</strong> mute, if the player does not comply with given staff instructions to refrain from attempting to impersonate others. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          5. Extreme Toxicity
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+              Excessive toxicity towards other users ruins the experience for those affected, thus resulting in temporary or even permanent restrictions for offenders.
+              Reports for <strong>extreme toxicity</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.
+              <br><br>The following categories which fall under extreme toxicity are listed below.
+            </p>
+            <p class="text-lg font-semibold text-gray-300">Categories:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Harassment</li>
+                        <li>Racism</li>
+                        <li>Extreme Profanity</li>
+                        <li>Usage of Slurs</li>
+                        <li>Discriminatory behavior</li>
+                    </ul>
+                    <br>
+               <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>extreme toxicity</strong> is a <strong>7-day</strong> mute. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          6. Cheating
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <div class="text-gray-300 text-sm mb-10 leading-relaxed">
+                <p>
+                    The usage of modified clients is strictly prohibited, as it provides an unfair advantage to the player. It's important to remember that both our staff and community strongly oppose cheating and are committed to maintaining fair and competitive gameplay
+                    enviroment towards all players. We aim to ensure equal treatment for everyone.
+                    <br>
+                    <br> Reports for <strong>cheating</strong> may be issued in our
+                    <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                        <span>Discord Server</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>.
+                    <br>
+                    <br>
+                    <p class="text-lg font-semibold text-gray-300">Primary Allowed Clients:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Lunar Client</li>
+                        <li>Feather Client</li>
+                        <li>Laby Mod</li>
+                        <li>Badlion Client</li>
+                        <li>Minecraft Vanilla</li>
+                        <li>Modrinth Launcher</li>
+                        <li>Any general client that does not provide built-in unfair modifications.</li>
+                    </ul>
+                    <br>
+                    <p>What is considered an unfair advantage is listed below. These client modifications may result in an immediate <strong>ban</strong>.</p>
+                    <br>
+                    <p class="text-lg font-semibold text-gray-300">Disallowed Client Modifications:</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Reach</li>
+                        <li>Aim Assist</li>
+                        <li>KillAura</li>
+                        <li>Triggerbot</li>
+                        <li>Fly</li>
+                        <li>Speed</li>
+                        <li>AutoJumpReset</li>
+                        <li>Velocity</li>
+                        <li>Any general modification which provides an unfair advantage.</li>
+                    </ul>
+                    <br>
+                    <p>
+                        An important factor to keep in mind is that, in some cases, we reserve the right to perform a <strong>screenshare</strong> on you, to ensure fair play and verify player intentions. Our staff may conduct a screenshare if you trigger
+                        suspicious alerts, in order to verify the legitimacy of your gameplay.
+                    </p>
+                    <br>
+                    <p class="text-lg font-semibold text-gray-300 mb-2">Screenshare Conduct:</p>
+                    <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                        <li>
+                            Screenshares are typically conducted by experienced and trusted members of our staff team. We highly value player privacy and take every measure to ensure that nothing goes wrong during the process.
+                        </li>
+                        <li>
+                            Refusing a screenshare may result in a <strong>punishment</strong>, as it prevents staff from verifying the legitimacy of your gameplay environment.
+                        </li>
+                        <li>
+                            A screenshare will only be conducted if the staff team believes there is a valid and suspicious reason to do so.
+                        </li>
+                        <li>
+                            Screensharers are strictly prohibited from engaging in any form of malicious activity, this includes doxxing or the use of remote access trojans with the intention of causing harm towards the player.
+                        </li>
+                        <li>
+                            You are required to have standard screenshare services enabled to ensure the process can be performed effectively and accurately.
+                        </li>
+                        <li>
+                            Stalling or exceeding the given time to perform the screenshare may result in a <strong>punishment</strong>.
+                        </li>
+                    </ul>
+                    <br>
+                    <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+                    <p class="text-sm font-semibold text-gray-300 mb-2">Cheating:</p>
+                    <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                        <li>
+                            The standard punishment for cheating may result in a <strong>30-day</strong> ban, and the duration is doubled for each repeated offense.
+                        </li>
+                        <li>
+                            Any attempt to evade this punishment will result in an increased ban duration.
+                        </li>
+                    </ul>
+
+                    <br>
+
+                    <p class="text-sm font-semibold text-gray-300 mb-2">Screenshare Refusal:</p>
+                    <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                        <li>
+                            Similar to bans for cheating, refusing a screenshare will result in a <strong>30-day</strong> ban, with the duration doubling for each repeated violation.
+                        </li>
+                    </ul>
+            </div>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+              7. Fight Interruptions
+              <i class="fas fa-exclamation-circle ml-2"></i>
+            </h3>
+
+            <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                To maintain fair gameplay, we strictly prohibit players from interrupting any kind of fight, as it can discourage others from continuing to practice on our server. We take this behavior very seriously, as it negatively impacts the experience for everyone
+                on the server.
+            </p>
+            <p>
+                <strong>What can be considered may be considered a fight interruption:</strong>
+                <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                    <li>Intentionally attacking two or more players during a fight session with the goal of disrupting them.</li>
+                    <li>Deliberately following players after they change spawns, just to interrupt them again.</li>
+                    <li>Purposely killing a player when they are at low health in order to steal the kill.</li>
+                </ul>
+            </p>
+            <p>
+                <br>
+                <strong>What can not be considered may be considered a fight interruption:</strong>
+                <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                    <li>Attempting to attack any player participating within a Clan War or Clan Gank.</li>
+                </ul>
+            </p>
+            <br>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+                Reports for <strong>fight interruptions</strong> may be issued in our
+                <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                    <span>Discord Server</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>.
+            </p>
+
+            <p class="text-lg font-semibold text-gray-300 mb-2">Exceptions:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>Exceptions for fight interruptions may be made during official Clan Wars or Clan Ganks.</li>
+                <li>
+                    This exception does not apply to players who are not actively participating in the clan war or gank. You are still prohibited from interrupting unrelated players to maintain fairness.
+                </li>
+            </ul>
+
+            <p class="text-lg font-semibold text-gray-300 mt-8 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>fight interruptions</strong> is a <strong>3-day</strong> ban. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+              8. Statistic Farming
+              <i class="fas fa-exclamation-circle ml-2"></i>
+            </h3>
+            <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                Attempting to gain statistics unfairly just to climb the leaderboards is a serious violation of our rules and may result in a punishment. We are committed to ensuring fair gameplay by strictly prohibiting players from intentionally killing others to farm
+                statistics.
+            </p>
+
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+                Reports for <strong>statistic farming</strong> may be issued in our
+                <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                    <span>Discord Server</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>.
+            </p>
+
+            <p class="text-lg font-semibold text-gray-300 mb-2">What can be considered Statistic Farming:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300 mb-10">
+                <li>Repeatedly killing your alternate account or another player who has no armor.</li>
+            </ul>
+
+            <p class="text-lg font-semibold text-gray-300 mb-2">Exceptions:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300 mb-10">
+                <li>Exceptions may be made during Clan Wars or Clan Ganks.</li>
+                <li>
+                    This exception does not apply to players who are not actively participating in the clan war or gank. You are still prohibited from interrupting unrelated players to maintain fairness.
+                </li>
+            </ul>
+
+            <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>statistic farming</strong> is a <strong>7-day</strong> ban. The duration doubles with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in a significantly increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+              9. Exploit Abusing
+              <i class="fas fa-exclamation-circle ml-2"></i>
+            </h3>
+
+            <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                Attempting to find and abuse exploits or major bugs with the intent to harm the gameplay experience will result in a severe punishment. Such actions can cause significant damage to the server and are taken extremely seriously.
+            </p>
+
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+                Reports for <strong>bugs</strong> may be submitted in our
+                <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                    <span>Discord Server</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>. We highly encourage all players to report bugs rather than abuse them. In some cases, we may even offer rewards for valuable bug reports.
+            </p>
+
+            <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>exploit abuse</strong> is a <strong>30-day</strong> ban. The duration may vary depending on the severity of the exploit and will double with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in an increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          10. Advertising
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+                You may not promote any servers, competition to Lunalite or not, as well as any other unrelated content of any kind. Exceptions may only apply towards Media Influencers playing on the server during a livestream or Video otherwise you will recieve a Punishment.<br><br>
+                Reports for <strong>advertising</strong> may be issued in our
+                <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                    <span>Discord Server</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>.
+              </p>
+            <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
+            <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
+                <li>
+                    The standard punishment for <strong>advertising</strong> is a <strong>7-day</strong> mute. The duration may vary depending on the severity of the exploit and will double with each repeated offense.
+                </li>
+                <li>
+                    Any attempt to evade this punishment will result in an increased ban duration.
+                </li>
+            </ul>
+            <br>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+          11. Punishment Evasion
+          <i class="fas fa-exclamation-circle ml-2"></i>
+        </h3>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+                Attempting to evade a Punishment will lead into an extended Punishment duration, upto <strong>90 Days</strong> and may even lead to a ban, in some cases. The duration is doubled on repeated offenses.
+            </p>
+            <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
+              12. Inappropriate Content
+              <i class="fas fa-exclamation-circle ml-2"></i>
+            </h3>
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                Sharing any form of inappropriate content, whether its in text, images, GIFs, or videos, is strictly prohibited. Doing so may result in the deletion of the message and a punishment against the offender.
+            </p>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-2">
+                This includes but is not limited to:
+            </p>
+
+            <ul class="list-disc list-outside pl-5 text-sm text-gray-300 mb-6">
+                <li>Gore</li>
+                <li>Pornography</li>
+                <li>NSFW content</li>
+                <li>Hentai</li>
+            </ul>
+            </p>
+            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+             It also includes any attempts at sexual harassment toward other players on the server.
+             <br><br>
+              Reports for <strong>inappropriate content</strong> may be issued in our
+                <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
+                    <span>Discord Server</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>.
+            </p>
+
+            <footer class="w-full py-6 mt-16 text-gray-500 text-center text-sm select-none">
+                &copy; <span id="year"></span> Lunalite. All rights reserved.
+            </footer>
+          </body>
+
+          <script src="Scripts/scrolltotop.js"></script>
+          <script src="Scripts/loading.js"></script>
+          <script src="Scripts/search.js"></script>
+          <script>
+          document.getElementById("year").textContent = new Date().getFullYear();
+          window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+          };
+
+          setTimeout(() => {
+            AOS.init();
+          }, 4000);
+
+          searchInput.addEventListener("input", () => {
+            const filter = searchInput.value.toLowerCase().trim();
+            const ruleHeaders = Array.from(rulesContainer.querySelectorAll("h3"));
+            if (!filter) {
+              ruleHeaders.forEach((h3) => {
+                h3.style.display = "";
+
+                let sibling = h3.nextElementSibling;
+          while (sibling && sibling.tagName !== "H3") {
+            sibling.style.display = "";
+            sibling = sibling.nextElementSibling;
+          }
+        });
+      } else {
+        ruleHeaders.forEach((h3) => {
+          let combinedText = h3.textContent.toLowerCase();
+          let sibling = h3.nextElementSibling;
+
+          while (sibling && sibling.tagName !== "H3") {
+            combinedText += " " + sibling.textContent.toLowerCase();
+            sibling = sibling.nextElementSibling;
+          }
+
+          const matched = combinedText.includes(filter);
+
+          h3.style.display = matched ? "" : "none";
+
+          sibling = h3.nextElementSibling;
+          while (sibling && sibling.tagName !== "H3") {
+            sibling.style.display = matched ? "" : "none";
+            sibling = sibling.nextElementSibling;
+          }
+        });
+      }
+    });
+
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" || e.key === "Esc" || e.key === "Enter") {
+        if (
+          searchBox.classList.contains("w-full") ||
+          searchBox.classList.contains("max-w-xs")
+        ) {
+          searchBox.classList.remove(
+            "w-full",
+            "max-w-xs",
+            "opacity-100",
+            "pointer-events-auto"
+          );
+          searchBox.classList.add("w-0", "opacity-0", "pointer-events-none");
+          searchInput.value = "";
+          searchInput.blur();
+          document.body.style.paddingTop = "";
+
+          if (isMobile()) {
+            showNavIcons();
+          }
+        }
+      }
+    });
+    document.addEventListener("click", (event) => {
+      const isClickInsideSearchBox = searchBox.contains(event.target);
+      const isClickOnToggleBtn = toggleBtn.contains(event.target);
+
+      if (
+        !isClickInsideSearchBox &&
+        !isClickOnToggleBtn &&
+        (searchBox.classList.contains("w-full") ||
+          searchBox.classList.contains("max-w-xs"))
+      ) {
+        searchBox.classList.remove(
+          "w-full",
+          "max-w-xs",
+          "opacity-100",
+          "pointer-events-auto"
+        );
+        searchBox.classList.add("w-0", "opacity-0", "pointer-events-none");
+        searchInput.value = "";
+        searchInput.blur();
+        document.body.style.paddingTop = "";
+
+        if (isMobile()) {
+          showNavIcons();
+        }
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+</script>
+</html>
