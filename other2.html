@@ -20,7 +20,7 @@
 </head>
 
 <body class="min-h-screen flex flex-col items-center px-4 py-12">
-  <button id="backToTopBtn" aria-label="Back to top" class="fixed bottom-8 right-8 p-3 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 opacity-0 pointer-events-none transition-opacity duration-300">
+<button id="backToTopBtn" aria-label="Back to top" class="fixed bottom-8 right-8 p-3 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 opacity-0 transition-opacity duration-300">
     <i class="fas fa-chevron-up"></i>
   </button>
     <div id="loadingScreen" class="fixed inset-0 bg-[#111827] flex items-center justify-center z-[99999]">
@@ -35,6 +35,11 @@
         </a>
     </nav>
 
+    <style>
+      #backToTopBtn {
+        z-index: 9999;
+      }
+    </style>
     <div class="fixed top-7 right-4 z-50 flex items-center space-x-2 sm:right-8">
         <button id="toggleSearch" class="text-indigo-500 hover:text-indigo-700 transition text-2xl focus:outline-none flex items-center justify-center h-14" aria-label="Toggle Search">
             <i class="fas fa-search"></i>
@@ -54,7 +59,7 @@
         As with any server, a fair and welcoming environment cannot exist without some rules in place. These following rules must be followed at all times. Failure to do so might lead to a mute or ban, depending on the situation.
     </p>
     <p class="text-center text-xs text-gray-500 mb-16" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
-        Last updated: July 10, 2025
+        Last updated: July 11, 2025
     </p>
     <div class="max-w-3xl w-full text-left mt-20 px-4 responsive-left-shift" data-aos="fade-left" data-aos-duration="1000">
         <div id="rulesContainer" data-aos="fade-left" data-aos-duration="1000">
@@ -136,12 +141,12 @@
             </ul>
             <br>
             <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
-          4. Doxxing
+          4. Malicious Behaviour
           <i class="fas fa-exclamation-circle ml-2"></i>
         </h3>
              <p class="text-gray-300 text-sm mb-10 leading-relaxed">
-              Sharing other users personal information without their consent of any kind, is strictly prohibited and will result in an immediate permanent ban from our network.<br><br>
-               Reports for <strong>doxxing</strong> may be issued in our
+              Sharing other users personal information without their consent of any kind, harassing a user, attempting to DDOS a user and anything else with malicious intention is strictly prohibited and will result in an immediate permanent ban from our network.<br><br>
+               Reports for <strong>Malicious Behaviour</strong> may be issued in our
                     <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
                         <span>Discord Server</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -151,7 +156,7 @@
                         </svg>
                     </a>.<br><br>
                     Users caught violating this rule will be issued with a permanent non-appealable blacklist from the entire Network. Our systems will automatically notify a player if they are Blacklisted from the Network.<br><br>
-                    Behaviour which fall under doxxing can be found below this message.
+                    Behaviour which fall under the network blacklist can be found below this message.
                   </p>
                 <p class="text-lg font-semibold text-gray-300 mb-2">Categories:</p>
                <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
@@ -162,12 +167,19 @@
                 <li>Revealing a Face.</li>
                 <li>Revealing a Family Relative's Name.</li>
                 <li>Revealing any private information about the player.</li>
+                <li>Attempting to DDOS a Player.</li>
+                <li>Harassing a Player.</li>
+                <li>Sexually Harassing a Player.</li>
+                <li>Attemtping to RAT a Player.</li>
+                <li>Attemtping to Defame a Player.</li>
+                <li>Attemtping to Swat a Player.</li>
+                <li>Anything that has malicious intention of causing damage towards a player.</li>
                </ul>
                 <br>
                   <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
             <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
                 <li>
-                    The standard punishment for <strong>doxxing</strong> is a <strong>permanent</strong> blacklist, from the Network without appeal.
+                    The standard punishment for <strong>malicious behavior</strong> is a <strong>permanent</strong> blacklist, from the Network without appeal.
                 </li>
             </ul>
             <br>
@@ -319,12 +331,12 @@
             </ul>
             <br>
             <h3 id="community-guidelines" class="font-semibold text-xl mb-4 flex items-center text-indigo-400">
-          3. Doxxing
+          3. Malicious Behaviour
           <i class="fas fa-exclamation-circle ml-2"></i>
         </h3>
-            <p class="text-gray-300 text-sm mb-10 leading-relaxed">
-              Sharing other users personal information without their consent of any kind, is strictly prohibited and will result in an immediate permanent ban from our network.<br><br>
-               Reports for <strong>doxxing</strong> may be issued in our
+               <p class="text-gray-300 text-sm mb-10 leading-relaxed">
+              Sharing other users personal information without their consent of any kind, harassing a user, attempting to DDOS a user and anything else with malicious intention is strictly prohibited and will result in an immediate permanent ban from our network.<br><br>
+               Reports for <strong>Malicious Behaviour</strong> may be issued in our
                     <a href="https://discord.lunalite.net" target="_blank" rel="noopener noreferrer" class="font-bold text-gray-300 underline hover:text-indigo-400 flex items-center inline-flex space-x-1">
                         <span>Discord Server</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -334,7 +346,7 @@
                         </svg>
                     </a>.<br><br>
                     Users caught violating this rule will be issued with a permanent non-appealable blacklist from the entire Network. Our systems will automatically notify a player if they are Blacklisted from the Network.<br><br>
-                    Behaviour which fall under doxxing can be found below this message.
+                    Behaviour which fall under the network blacklist can be found below this message.
                   </p>
                 <p class="text-lg font-semibold text-gray-300 mb-2">Categories:</p>
                <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
@@ -345,12 +357,19 @@
                 <li>Revealing a Face.</li>
                 <li>Revealing a Family Relative's Name.</li>
                 <li>Revealing any private information about the player.</li>
+                <li>Attempting to DDOS a Player.</li>
+                <li>Harassing a Player.</li>
+                <li>Sexually Harassing a Player.</li>
+                <li>Attemtping to RAT a Player.</li>
+                <li>Attemtping to Defame a Player.</li>
+                <li>Attemtping to Swat a Player.</li>
+                <li>Anything that has malicious intention of causing damage towards a player.</li>
                </ul>
                 <br>
                   <p class="text-lg font-semibold text-gray-300 mb-2">Punishment Durations:</p>
             <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
                 <li>
-                    The standard punishment for <strong>doxxing</strong> is a <strong>permanent</strong> blacklist, from the Network without appeal.
+                    The standard punishment for <strong>malicious behavior</strong> is a <strong>permanent</strong> blacklist, from the Network without appeal.
                 </li>
             </ul>
             <br>
@@ -520,7 +539,7 @@
                 on the server.
             </p>
             <p>
-                <strong>What can be considered may be considered a fight interruption:</strong>
+                <strong>What can be considered a fight interruption:</strong>
                 <ul class="list-disc list-outside pl-5 space-y-4 text-sm text-gray-300">
                     <li>Intentionally attacking two or more players during a fight session with the goal of disrupting them.</li>
                     <li>Deliberately following players after they change spawns, just to interrupt them again.</li>
@@ -723,9 +742,14 @@
             window.scrollTo(0, 0);
           };
 
-          setTimeout(() => {
-            AOS.init();
-          }, 4000);
+        let aosInitialized = false;
+        setTimeout(() => {
+        if (!aosInitialized) {
+        AOS.init();
+        aosInitialized = true;
+        }
+        }, 4000);
+
 
           searchInput.addEventListener("input", () => {
             const filter = searchInput.value.toLowerCase().trim();
