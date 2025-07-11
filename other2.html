@@ -16,7 +16,7 @@
     </head>
     <body class="flex items-center flex-col min-h-screen px-4 py-12"><button aria-label="Back to top" class="fixed bg-indigo-600 bottom-8 duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 hover:bg-indigo-700 opacity-0 p-3 right-8 rounded-full shadow-lg text-white transition-opacity" id=backToTopBtn><i class="fas fa-chevron-up"></i></button>
       <div class="flex items-center fixed bg-[#111827] inset-0 justify-center z-[99999]" id=loadingScreen><img alt=Loading class="h-32 w-32 animate-spin" src=logo.png></div>
-      <nav class="flex justify-center w-full gap-8 max-w-3xl mb-16" data-aos=fade-down data-aos-duration=1000 id=navIcons><a class="text-indigo-500 hover:text-indigo-700 text-2xl transition" href=https://discord.lunalite.net rel=noopener target=_blank aria-label="Discord Server"><i class="fa-discord fab"></i></a><a class="text-indigo-500 hover:text-indigo-700 text-2xl transition" href=https://store.lunalite.net rel=noopener target=_blank aria-label=Store><i class="fas fa-shopping-cart"></i></a></nav>
+      <nav class="flex justify-center w-full gap-8 max-w-3xl mb-16" id=navIcons><a class="text-indigo-500 hover:text-indigo-700 text-2xl transition" href=https://discord.lunalite.net rel=noopener target=_blank aria-label="Discord Server"><i class="fa-discord fab"></i></a><a class="text-indigo-500 hover:text-indigo-700 text-2xl transition" href=https://store.lunalite.net rel=noopener target=_blank aria-label=Store><i class="fas fa-shopping-cart"></i></a></nav>
       <style>
         #backToTopBtn {
           z-index: 9999
@@ -39,9 +39,9 @@
       <body class=fade-up-init><img alt="Lunalite Logo" class="fade-up-init h-32 hover-float mb-6 w-32" src=logo.png>
         <h1 class="fade-up-init text-center font-extrabold mb-2 text-4xl"> Lunalite — Community Rules </h1>
         <p class="fade-up-init text-center max-w-xl mb-12 text-indigo-200"> As with any server, a fair and welcoming environment cannot exist without some rules in place. These following rules must be followed at all times. Failure to do so might lead to a mute or ban, depending on the situation. </p>
-        <p class="fade-up-init text-center mb-16 text-gray-500 text-xs" data-aos=fade-up data-aos-delay=700 data-aos-duration=1500> Last updated: July 11, 2025 </p>
-        <div class="fade-up-init max-w-3xl mt-20 px-4 responsive-left-shift text-left w-full" data-aos=fade-left data-aos-duration=1000>
-          <div id=rulesContainer data-aos=fade-left data-aos-duration=1000>
+        <p class="fade-up-init text-center mb-16 text-gray-500 text-xs" > Last updated: July 11, 2025 </p>
+        <div class="fade-up-init max-w-3xl mt-20 px-4 responsive-left-shift text-left w-full" t >
+          <div id=rulesContainer t>
             <h1 class="flex items-center mb-4 font-extrabold text-3xl" id=discord-rules><span class=hashtag>#</span> General Rules <i class="fas ml-3 text-indigo-500 fa-gavel"></i></h1>
             <p class="text-gray-300 leading-relaxed mb-10 text-base fade-up-init"> This section covers the rules specific to our Discord server and Minecraft Server. Below is a comprehensive list of prohibited actions. Failure to comply with these rules may result in disciplinary action. </p>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 1. Duplicate Messages <i class="fas fa-exclamation-circle ml-2"></i></h3>
@@ -59,12 +59,12 @@
               <li>Extreme Profanity</li>
               <li>Usage of Slurs</li>
               <li>Discriminatory behavior</li>
-            </ul><br>
+            </ul><br><br>
             <p class="text-gray-300 font-semibold text-lg mb-2">Punishment Durations:</p>
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>extreme toxicity</strong> is a <strong>7-day</strong> mute. The duration doubles with each repeated offense. </li>
               <li> Any attempt to evade this punishment will result in a significantly increased ban duration. </li>
-            </ul><br>
+            </ul><br><br>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 3. Trolling <i class="fas fa-exclamation-circle ml-2"></i></h3>
             <p class="text-gray-300 text-sm leading-relaxed mb-10"> Disruptive and annoying actions, such as spam-pinging staff and other users, opening tickets for no reason, and other things along those lines, waste our and other peoples time, and are thus not permitted. Offenses may result in temporary restrictions and bans from opening tickets. Reports for <strong>trolling</strong> may be issued in our <a class="text-gray-300 flex font-bold hover:text-indigo-400 inline-flex items-center space-x-1 underline" href=https://discord.lunalite.net rel="noopener noreferrer" target=_blank><span>Discord Server</span><svg aria-hidden=true class="h-4 w-4" fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
                   <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -75,7 +75,7 @@
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>trolling</strong> is a <strong>7-day</strong> mute. The duration doubles with each repeated offense. </li>
               <li> Any attempt to evade this punishment will result in a significantly increased ban duration. </li>
-            </ul><br>
+            </ul><br><br>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 4. Malicious Behaviour <i class="fas fa-exclamation-circle ml-2"></i></h3>
             <p class="text-gray-300 text-sm leading-relaxed mb-10"> Sharing other users personal information without their consent of any kind, harassing a user, attempting to DDOS a user and anything else with malicious intention is strictly prohibited and will result in an immediate permanent ban from our network.<br><br> Reports for <strong>Malicious Behaviour</strong> may be issued in our <a class="text-gray-300 flex font-bold hover:text-indigo-400 inline-flex items-center space-x-1 underline" href=https://discord.lunalite.net rel="noopener noreferrer" target=_blank><span>Discord Server</span><svg aria-hidden=true class="h-4 w-4" fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
                   <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -98,11 +98,11 @@
               <li>Attemtping to Defame a Player.</li>
               <li>Attemtping to Swat a Player.</li>
               <li>Anything that has malicious intention of causing damage towards a player.</li>
-            </ul><br>
+            </ul><br><br>
             <p class="text-gray-300 font-semibold text-lg mb-2">Punishment Durations:</p>
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>malicious behavior</strong> is a <strong>permanent</strong> blacklist, from the Network without appeal. </li>
-            </ul><br>
+            </ul><br><br>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 5. Impersonation <i class="fas fa-exclamation-circle ml-2"></i></h3>
             <p class="text-gray-300 text-sm leading-relaxed mb-10"> Users may not pretend to be others, and offenders of this rule will be asked to adapt their profile to comply with this rule. Ignoring those instructions may result in restrictions later down the line.<br><br> Reports for <strong>Impersonation</strong> may be issued in our <a class="text-gray-300 flex font-bold hover:text-indigo-400 inline-flex items-center space-x-1 underline" href=https://discord.lunalite.net rel="noopener noreferrer" target=_blank><span>Discord Server</span><svg aria-hidden=true class="h-4 w-4" fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
                   <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -113,7 +113,7 @@
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>impersonation</strong> is a <strong>1-week</strong> mute, if the player does not comply with given staff instructions to refrain from attempting to impersonate others. The duration doubles with each repeated offense. </li>
               <li> Any attempt to evade this punishment will result in a significantly increased ban duration. </li>
-            </ul><br>
+            </ul><br><br>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 6. Advertising <i class="fas fa-exclamation-circle ml-2"></i></h3>
             <p class="text-gray-300 text-sm leading-relaxed mb-10"> You may not promote any servers, competition to Lunalite or not, as well as any other unrelated content of any kind. Exceptions may only apply towards Media Influencers playing on the server during a livestream or Video otherwise you will recieve a Punishment.<br><br> Reports for <strong>advertising</strong> may be issued in our <a class="text-gray-300 flex font-bold hover:text-indigo-400 inline-flex items-center space-x-1 underline" href=https://discord.lunalite.net rel="noopener noreferrer" target=_blank><span>Discord Server</span><svg aria-hidden=true class="h-4 w-4" fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
                   <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -124,7 +124,7 @@
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>advertising</strong> is a <strong>7-day</strong> mute. The duration may vary depending on the severity of the exploit and will double with each repeated offense. </li>
               <li> Any attempt to evade this punishment will result in an increased ban duration. </li>
-            </ul><br>
+            </ul><br><br>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 7. Inappropriate Content <i class="fas fa-exclamation-circle ml-2"></i></h3>
             <p class="text-gray-300 text-sm leading-relaxed mb-4"> Sharing any form of inappropriate content, whether its in text, images, GIFs, or videos, is strictly prohibited. Doing so may result in the deletion of the message and a punishment against the offender. </p>
             <p class="text-gray-300 text-sm leading-relaxed mb-2"> This includes but is not limited to: </p>
@@ -160,7 +160,7 @@
                 <li>Minecraft Vanilla</li>
                 <li>Modrinth Launcher</li>
                 <li>Any general client that does not provide built-in unfair modifications.</li>
-              </ul><br>
+              </ul><br><br>
               <p>What is considered an unfair advantage is listed below. These client modifications may result in an immediate <strong>ban</strong>.</p><br>
               <p class="text-gray-300 font-semibold text-lg">Disallowed Client Modifications:</p>
               <ul class="text-sm list-disc list-inside space-y-1">
@@ -173,7 +173,7 @@
                 <li>AutoJumpReset</li>
                 <li>Velocity</li>
                 <li>Any general modification which provides an unfair advantage.</li>
-              </ul><br>
+              </ul><br><br>
               <p> An important factor to keep in mind is that, in some cases, we reserve the right to perform a <strong>screenshare</strong> on you, to ensure fair play and verify player intentions. Our staff may conduct a screenshare if you trigger suspicious alerts, in order to verify the legitimacy of your gameplay. </p><br>
               <p class="text-gray-300 font-semibold text-lg mb-2">Screenshare Conduct:</p>
               <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
@@ -183,13 +183,13 @@
                 <li> Screensharers are strictly prohibited from engaging in any form of malicious activity, this includes doxxing or the use of remote access trojans with the intention of causing harm towards the player. </li>
                 <li> You are required to have standard screenshare services enabled to ensure the process can be performed effectively and accurately. </li>
                 <li> Stalling or exceeding the given time to perform the screenshare may result in a <strong>punishment</strong>. </li>
-              </ul><br>
+              </ul><br><br>
               <p class="text-gray-300 font-semibold text-lg mb-2">Punishment Durations:</p>
               <p class="text-gray-300 text-sm mb-2 font-semibold">Cheating:</p>
               <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
                 <li> The standard punishment for cheating may result in a <strong>30-day</strong> ban, and the duration is doubled for each repeated offense. </li>
                 <li> Any attempt to evade this punishment will result in an increased ban duration. </li>
-              </ul><br>
+              </ul><br><br>
               <p class="text-gray-300 text-sm mb-2 font-semibold">Screenshare Refusal:</p>
               <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
                 <li> Similar to bans for cheating, refusing a screenshare will result in a <strong>30-day</strong> ban, with the duration doubling for each repeated violation. </li>
@@ -223,7 +223,7 @@
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>fight interruptions</strong> is a <strong>3-day</strong> ban. The duration doubles with each repeated offense. </li>
               <li> Any attempt to evade this punishment will result in a significantly increased ban duration. </li>
-            </ul><br>
+            </ul><br><br>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 3. Statistic Farming <i class="fas fa-exclamation-circle ml-2"></i></h3>
             <p class="text-gray-300 text-sm leading-relaxed mb-6"> Attempting to gain statistics unfairly just to climb the leaderboards is a serious violation of our rules and may result in a punishment. We are committed to ensuring fair gameplay by strictly prohibiting players from intentionally killing others to farm statistics. </p>
             <p class="text-gray-300 text-sm leading-relaxed mb-10"> Reports for <strong>statistic farming</strong> may be issued in our <a class="text-gray-300 flex font-bold hover:text-indigo-400 inline-flex items-center space-x-1 underline" href=https://discord.lunalite.net rel="noopener noreferrer" target=_blank><span>Discord Server</span><svg aria-hidden=true class="h-4 w-4" fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
@@ -244,7 +244,7 @@
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>statistic farming</strong> is a <strong>7-day</strong> ban. The duration doubles with each repeated offense. </li>
               <li> Any attempt to evade this punishment will result in a significantly increased ban duration. </li>
-            </ul><br>
+            </ul><br><br>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 4. Exploit Abusing <i class="fas fa-exclamation-circle ml-2"></i></h3>
             <p class="text-gray-300 text-sm leading-relaxed mb-6"> Attempting to find and abuse exploits or major bugs with the intent to harm the gameplay experience will result in a severe punishment. Such actions can cause significant damage to the server and are taken extremely seriously. </p>
             <p class="text-gray-300 text-sm leading-relaxed mb-10"> Reports for <strong>bugs</strong> may be submitted in our <a class="text-gray-300 flex font-bold hover:text-indigo-400 inline-flex items-center space-x-1 underline" href=https://discord.lunalite.net rel="noopener noreferrer" target=_blank><span>Discord Server</span><svg aria-hidden=true class="h-4 w-4" fill=none stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
@@ -256,7 +256,7 @@
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>exploit abuse</strong> is a <strong>30-day</strong> ban. The duration may vary depending on the severity of the exploit and will double with each repeated offense. </li>
               <li> Any attempt to evade this punishment will result in an increased ban duration. </li>
-            </ul><br>
+            </ul><br><br>
             <h3 class="font-semibold flex items-center mb-4 text-indigo-400 text-xl" id=community-guidelines> 5. Punishment Evasion <i class="fas fa-exclamation-circle ml-2"></i></h3>
             <p class="text-gray-300 text-sm leading-relaxed mb-10"> Attempting to evade a Punishment will lead into an extended Punishment duration, upto <strong>90 Days</strong> and may even lead to a ban, in some cases. The duration is doubled on repeated offenses. </p>
             <div class="flex justify-center w-full mt-16">
