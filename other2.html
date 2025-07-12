@@ -271,7 +271,7 @@
               window.onbeforeunload = function() {
                 window.scrollTo(0, 0);
               };
-              document.addEventListener("DOMContentLoaded", () => {
+          document.addEventListener("DOMContentLoaded", () => {
                 const loadingScreen = document.getElementById("loadingScreen");
                 const mainContent = document.getElementById("mainContent");
                 const pageFooter = document.getElementById("pageFooter");
@@ -295,7 +295,7 @@
                       mainContent.classList.add("fade-in-cool");
                     }
                   }, 240);
-                }, 3000);
+                }, 2000);
               });
               searchInput.addEventListener("input", () => {
                 const filter = searchInput.value.toLowerCase().trim();
