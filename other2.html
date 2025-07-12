@@ -267,7 +267,6 @@
             <script src=Scripts/scrolltotop.js></script>
             <script src=Scripts/search.js></script>
             <script src=Scripts/css.js></script>
-            <script src=Scripts/loading.js></script>
             <script>
               function toggleMore() {
                 const moreItems = document.querySelectorAll('.more');
@@ -280,6 +279,34 @@
                 button.textContent = isHidden ? 'Show less' : 'Show more';
               }
               window.toggleMore = toggleMore;
+            </script>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const loadingScreen = document.getElementById("loadingScreen");
+                const mainContent = document.getElementById("mainContent");
+                const pageFooter = document.getElementById("pageFooter");
+                if (pageFooter) {
+                  pageFooter.style.display = "none";
+                }
+                document.body.classList.add("loading-active");
+                setTimeout(() => {
+                  loadingScreen.style.transition = "opacity 0.5s ease";
+                  loadingScreen.style.opacity = "0";
+                  setTimeout(() => {
+                    loadingScreen.style.display = "none";
+                    document.body.classList.remove("loading-active");
+                    document.querySelectorAll(".fade-up-init").forEach((el) => {
+                      el.classList.add("fade-up-active");
+                    });
+                    if (pageFooter) {
+                      pageFooter.style.display = "block";
+                    }
+                    if (mainContent) {
+                      mainContent.classList.add("fade-in-cool");
+                    }
+                  }, 240);
+                }, 2000);
+              });
             </script>
             <script>
               document.getElementById("year").textContent = new Date().getFullYear();
