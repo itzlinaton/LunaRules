@@ -39,8 +39,8 @@
       <body class=fade-up-init><img alt="Lunalite Logo" class="fade-up-init h-32 hover-float mb-6 w-32" src=logo.png>
         <h1 class="fade-up-init text-center font-extrabold mb-2 text-4xl"> Lunalite — Community Rules </h1>
         <p class="fade-up-init text-center max-w-xl mb-12 text-indigo-200"> As with any server, a fair and welcoming environment cannot exist without some rules in place. These following rules must be followed at all times. Failure to do so might lead to a mute or ban, depending on the situation. </p>
-        <p class="fade-up-init text-center mb-16 text-gray-500 text-xs" > Last updated: July 11, 2025 </p>
-        <div class="fade-up-init max-w-3xl mt-20 px-4 responsive-left-shift text-left w-full" t >
+        <p class="fade-up-init text-center mb-16 text-gray-500 text-xs"> Last updated: July 11, 2025 </p>
+        <div class="fade-up-init max-w-3xl mt-20 px-4 responsive-left-shift text-left w-full" t>
           <div id=rulesContainer t>
             <h1 class="flex items-center mb-4 font-extrabold text-3xl" id=discord-rules><span class=hashtag>#</span> General Rules <i class="fas ml-3 text-indigo-500 fa-gavel"></i></h1>
             <p class="text-gray-300 leading-relaxed mb-10 text-base fade-up-init"> This section covers the rules specific to our Discord server and Minecraft Server. Below is a comprehensive list of prohibited actions. Failure to comply with these rules may result in disciplinary action. </p>
@@ -52,8 +52,8 @@
                   <polyline points="15 3 21 3 21 9"></polyline>
                   <line x1=10 x2=21 y1=14 y2=3></line>
                 </svg></a> . <br><br>The following categories which fall under extreme toxicity are listed below. </p>
-            <p class="text-gray-300 font-semibold text-lg">Categories:</p>
-            <ul class="text-sm list-disc list-inside space-y-1">
+            <p class="text-gray-300 font-semibold text-lg mb-2">Categories:</p>
+            <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li>Harassment</li>
               <li>Racism</li>
               <li>Extreme Profanity</li>
@@ -83,22 +83,24 @@
                   <line x1=10 x2=21 y1=14 y2=3></line>
                 </svg></a> .<br><br> Users caught violating this rule will be issued with a permanent non-appealable blacklist from the entire Network. Our systems will automatically notify a player if they are Blacklisted from the Network.<br><br> Behaviour which fall under the network blacklist can be found below this message. </p>
             <p class="text-gray-300 font-semibold text-lg mb-2">Categories:</p>
-            <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
-              <li>Revealing a Phone Number.</li>
-              <li>Revealing a Full Name.</li>
-              <li>Revealing an Adress.</li>
-              <li>Revealing an IP.</li>
-              <li>Revealing a Face.</li>
-              <li>Revealing a Family Relative's Name.</li>
-              <li>Revealing any private information about the player.</li>
-              <li>Attempting to DDOS a Player.</li>
-              <li>Harassing a Player.</li>
-              <li>Sexually Harassing a Player.</li>
-              <li>Attemtping to RAT a Player.</li>
-              <li>Attemtping to Defame a Player.</li>
-              <li>Attemtping to Swat a Player.</li>
-              <li>Anything that has malicious intention of causing damage towards a player.</li>
-            </ul><br><br>
+            <ul id="category-list" class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-2">
+              <li>Revealing phone numbers</li>
+              <li>Revealing full names</li>
+              <li>Revealing addresses</li>
+              <li class="hidden more">Revealing IPs</li>
+              <li class="hidden more">Revealing faces</li>
+              <li class="hidden more">Revealing family members' names</li>
+              <li class="hidden more">Sharing private player information</li>
+              <li class="hidden more">Attempting to DDoS</li>
+              <li class="hidden more">Player harassment</li>
+              <li class="hidden more">Sexual harassment</li>
+              <li class="hidden more">Attempting to use a RAT</li>
+              <li class="hidden more">Defamation attempts</li>
+              <li class="hidden more">Swatting threats or attempts</li>
+              <li class="hidden more">Any malicious intent to harm a player</li>
+            </ul><button id="toggle-button" 
+        class="mt-2 text-blue-400 hover:underline text-sm cursor-pointer" 
+        onclick="toggleMore()">Show more</button><br><br>
             <p class="text-gray-300 font-semibold text-lg mb-2">Punishment Durations:</p>
             <ul class="text-gray-300 text-sm list-disc list-outside pl-5 space-y-4">
               <li> The standard punishment for <strong>malicious behavior</strong> is a <strong>permanent</strong> blacklist, from the Network without appeal. </li>
@@ -263,40 +265,27 @@
               <footer class="text-sm py-6 select-none text-center text-gray-500"> © <span id=year></span> Lunalite. All rights reserved. </footer>
             </div>
             <script src=Scripts/scrolltotop.js></script>
-            <script src=Scripts/loading.js></script>
             <script src=Scripts/search.js></script>
             <script src=Scripts/css.js></script>
+            <script src=Scripts/loading.js></script>
+            <script>
+              function toggleMore() {
+                const moreItems = document.querySelectorAll('.more');
+                const button = document.getElementById('toggle-button');
+                if (!moreItems.length || !button) return;
+                const isHidden = moreItems[0].classList.contains('hidden');
+                moreItems.forEach(item => {
+                  item.classList.toggle('hidden');
+                });
+                button.textContent = isHidden ? 'Show less' : 'Show more';
+              }
+              window.toggleMore = toggleMore;
+            </script>
             <script>
               document.getElementById("year").textContent = new Date().getFullYear();
               window.onbeforeunload = function() {
                 window.scrollTo(0, 0);
               };
-          document.addEventListener("DOMContentLoaded", () => {
-                const loadingScreen = document.getElementById("loadingScreen");
-                const mainContent = document.getElementById("mainContent");
-                const pageFooter = document.getElementById("pageFooter");
-                if (pageFooter) {
-                  pageFooter.style.display = "none";
-                }
-                document.body.classList.add("loading-active");
-                setTimeout(() => {
-                  loadingScreen.style.transition = "opacity 0.5s ease";
-                  loadingScreen.style.opacity = "0";
-                  setTimeout(() => {
-                    loadingScreen.style.display = "none";
-                    document.body.classList.remove("loading-active");
-                    document.querySelectorAll(".fade-up-init").forEach((el) => {
-                      el.classList.add("fade-up-active");
-                    });
-                    if (pageFooter) {
-                      pageFooter.style.display = "block";
-                    }
-                    if (mainContent) {
-                      mainContent.classList.add("fade-in-cool");
-                    }
-                  }, 240);
-                }, 2000);
-              });
               searchInput.addEventListener("input", () => {
                 const filter = searchInput.value.toLowerCase().trim();
                 const ruleHeaders = Array.from(rulesContainer.querySelectorAll("h3"));
